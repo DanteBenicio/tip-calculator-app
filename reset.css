@@ -44,6 +44,11 @@ label {
   color: var(--dark-grayish-cyan);
 }
 
+span > strong {
+  display: block;
+  color: var(--very-light-grayish-cyan);
+}
+
 p {
   color: var(--dark-grayish-cyan);
   margin-bottom: 1rem;
