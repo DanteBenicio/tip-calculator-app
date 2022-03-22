@@ -121,8 +121,13 @@ function cleanCalculatedValues() {
   tipAmountValue.textContent = '$0.00'
   totalValue.textContent = '$0.00'
 
-  collectionTips.forEach(tip => tip.classList.remove('active'))
+  customTip.value = ''
 
-  button.classList.replace('reset', 'calc')
-  button.textContent = 'Calculate'
+  errorMessageFirstInput.textContent = ""
+  errorMessageSecondInput.textContent = ""
+
+  inputBill.style.borderColor = 'transparent'
+  inputNumberOfPeople.style.borderColor = 'transparent'
+
+  collectionTips.forEach(tip => tip.classList.remove('active'))
 }
