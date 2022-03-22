@@ -42,6 +42,7 @@ function getTipPercentage() {
     return percentage
   }
   
+  collectionTips.forEach(tip => tip.classList.remove('active'))
   return customTip.value
 }
 
