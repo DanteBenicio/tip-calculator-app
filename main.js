@@ -11,14 +11,9 @@ const totalValue = document.getElementById('total')
 
 const button = document.querySelector('.button')
 
-button.addEventListener('click', () => {
-  if (button.className.includes('calc')) {
-    calcTotal()
-    return
-  }
-
-  cleanCalculatedValues()
-})
+calcButton.addEventListener('click', calcTotal)
+resetButton.addEventListener('click', cleanCalculatedValues)
+customTip.addEventListener('input', removeActiveTip)
 
 collectionTips.forEach(tip => {
   tip.addEventListener('click', e => {
