@@ -7,11 +7,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <script type="module" src="./main.js" defer></script>
     <title>Tip Calculator | Frontend Mentor</title>
   </head>
   <body>
-    <section id="app"></section>
-    
+    <section id="app">
+      <div id="spliter">
+        <img src="assets/logo.svg" alt="logo writed spliter" aria-hidden="true">
+      </div>
+
+      <main class="calculator_container">
+        <div class="calculator_wrapper white">
+          <div class="input_group">
+            <span class="input_icon">
+              <img src="assets/icon-dollar.svg" alt="icon dollar">
+            </span>
+            <label for="input_bill">Bill</label>
+            <input type="number" placeholder="0" id="input_bill" class="input-1" tabindex="0">
+          </div>
+
+          <div class="select_tip">
+            <p>Select Tip &percnt;</p>
+            <div class="flex_tip_wrapper">
+              <div class="tip" tabindex="0">5%</div>
+              <div class="tip" tabindex="0">10%</div>
+              <div class="tip" tabindex="0">15%</div>
+              <div class="tip" tabindex="0">25%</div>
+              <div class="tip" tabindex="0">50%</div>
+              <input type="number" placeholder="Custom" tabindex="0" class="tip custom">
+            </div>
+          </div>
+
+          <div class="input_group">
+            <span class="input_icon">
+              <img src="assets/icon-person.svg" alt="icon person">
+            </span>
+            <label for="input_number_of_people">Number of People</label>
+            <input type="number" placeholder="0" id="input_number_of_people" class="input-1" tabindex="0">
+          </div>
+        </div>
+
+        <div class="calculator_wrapper very-dark-cyan">
+          <div class="tip_result_wrapper">
+            <div class="tip_amount">
+              <span>
+                <strong>Tip Amount</strong>
+                / person
+              </span>
+              <span id="tip_amount value">$0.00</span>
+            </div>
+
+            <div class="total">
+              <span>
+                <strong>Total</strong>
+                / person
+              </span>
+              <span id="total value">$0.00</span>
+            </div>
+          </div>
+          <button class="button-reset">reset</button>
+        </div>
+      </main>
+    </section>
   </body>
 </html>
