@@ -9,7 +9,8 @@ const customTip = document.querySelector('.tip.custom')
 const tipAmountValue = document.getElementById('tip_amount')
 const totalValue = document.getElementById('total')
 
-const button = document.querySelector('.button')
+const calcButton = document.querySelector('.button.calc')
+const resetButton = document.querySelector('.button.reset')
 
 calcButton.addEventListener('click', calcTotal)
 resetButton.addEventListener('click', cleanCalculatedValues)
