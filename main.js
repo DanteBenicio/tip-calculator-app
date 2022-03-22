@@ -110,8 +110,7 @@ function showValue(tipPerPerson, totalValueForPerson) {
   tipAmountValue.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'}).format(tipPerPerson)
   totalValue.textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'}).format(totalValueForPerson)
 
-  button.classList.replace('calc', 'reset')
-  button.textContent = 'Reset'
+  resetButton.style.display = 'block'
 }
 
 function cleanCalculatedValues() {
