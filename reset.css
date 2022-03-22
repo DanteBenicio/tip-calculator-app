@@ -3,4 +3,66 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+}
+
+input {
+  /* position: relative; */
+  width: 100%;
+
+  padding: 0.4rem 0.5rem;
+
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  
+  font-size: 1.5rem;
+  text-align: end;
+
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  border-color: var(--strong-cyan);
+}
+
+input::placeholder {
+  color: var(--grayish-cyan);
+  text-align: end;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--dark-grayish-cyan);
+}
+
+p {
+  color: var(--dark-grayish-cyan);
+  margin-bottom: 1rem;
+}
+
+html, body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+:root {
+  /*& Primary */ 
+  --strong-cyan: hsl(172, 67%, 45%);
+  --strong-cyan-active: hsl(172, 75%, 50%);
+  /*& Neutral */
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
 }
