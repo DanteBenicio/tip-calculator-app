@@ -34,6 +34,10 @@ collectionTips.forEach(tip => {
   })
 })
 
+function removeActiveTip() {
+  collectionTips.forEach(tip => tip.classList.remove('active'))
+}
+
 function getTipPercentage() {
   if (!customTip.value) {
     const selectedTip = collectionTips.find(tip => tip.className.includes('active'));
