@@ -94,6 +94,12 @@ function calcTotal() {
 
   const tipPercentage = getTipPercentage()
 
+  if (!tipPercentage) {
+    errorMessageTipWrapper.textContent = "Select a tip."
+
+    return
+  }
+
   const valuePerPersonNoTip = inputBillValue / inputNumberOfPeopleValue
 
   const tipPerPerson = calcTipAmountForPerson(valuePerPersonNoTip, tipPercentage)
