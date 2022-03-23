@@ -7,13 +7,12 @@
 }
 
 input {
-  /* position: relative; */
   width: 100%;
 
   padding: 0.4rem 0.5rem;
 
   outline: none;
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
   border-radius: 0.5rem;
   
   font-size: 1.5rem;
@@ -63,6 +62,7 @@ html, body {
   /*& Primary */ 
   --strong-cyan: hsl(172, 67%, 45%);
   --strong-cyan-active: hsl(172, 75%, 50%);
+  
   /*& Neutral */
   --very-dark-cyan: hsl(183, 100%, 15%);
   --dark-grayish-cyan: hsl(186, 14%, 43%);
