@@ -30,6 +30,49 @@ collectionTips.forEach(tip => {
   })
 })
 
+function hiddenErrorMessage(e) {
+  if (e.target !== calcButton && e.target !== resetButton) {
+    if (errorMessageFirstInput.textContent && errorMessageSecondInput.textContent && errorMessageTipWrapper.textContent) {
+      errorMessageFirstInput.textContent = ''
+      errorMessageSecondInput.textContent = ''
+      errorMessageTipWrapper.textContent = ''
+  
+      inputBill.style.borderColor = 'transparent'
+      inputNumberOfPeople.style.borderColor = 'transparent'
+  
+      return
+    }
+
+    if (errorMessageTipWrapper.textContent) {
+      errorMessageTipWrapper.textContent = ''
+    }
+
+    if (errorMessageFirstInput.textContent && errorMessageSecondInput.textContent) {
+      errorMessageFirstInput.textContent = ''
+      errorMessageSecondInput.textContent = ''
+  
+      inputBill.style.borderColor = 'transparent'
+      inputNumberOfPeople.style.borderColor = 'transparent'
+  
+      return
+    }
+  
+    if (errorMessageFirstInput.textContent) {
+      errorMessageFirstInput.textContent = ''
+      inputBill.style.borderColor = 'transparent'
+  
+      return
+    }
+  
+    if (errorMessageSecondInput.textContent) {
+      errorMessageSecondInput.textContent = ''
+      inputNumberOfPeople.style.borderColor = 'transparent'
+  
+      return
+    }
+  }
+}
+
 function removeActiveTip() {
   collectionTips.forEach(tip => tip.classList.remove('active'))
 }
