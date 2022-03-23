@@ -127,6 +127,7 @@ function cleanCalculatedValues() {
 
   errorMessageFirstInput.textContent = ""
   errorMessageSecondInput.textContent = ""
+  errorMessageTipWrapper.textContent = ""
 
   inputBill.style.borderColor = 'transparent'
   inputNumberOfPeople.style.borderColor = 'transparent'
