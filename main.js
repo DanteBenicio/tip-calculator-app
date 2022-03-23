@@ -4,17 +4,21 @@ const errorMessageFirstInput = document.querySelector('.first_input')
 const errorMessageSecondInput = document.querySelector('.second_input')
 
 const collectionTips = Array.from(document.querySelector('.flex_tip_wrapper').children).filter(tip => !tip.className.includes('custom'))
+const tipsWrapper = document.querySelector('.flex_tip_wrapper')
 const customTip = document.querySelector('.tip.custom')
+const errorMessageTipWrapper = document.querySelector('.tip_wrapper')
 
 const tipAmountValue = document.getElementById('tip_amount')
 const totalValue = document.getElementById('total')
 
 const calcButton = document.querySelector('.button.calc')
 const resetButton = document.querySelector('.button.reset')
+const body = document.querySelector('body')
 
 calcButton.addEventListener('click', calcTotal)
 resetButton.addEventListener('click', cleanCalculatedValues)
 customTip.addEventListener('input', removeActiveTip)
+body.addEventListener('click', hiddenErrorMessage)
 
 collectionTips.forEach(tip => {
   tip.addEventListener('click', e => {
