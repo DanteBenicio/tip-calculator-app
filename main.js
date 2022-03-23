@@ -37,6 +37,9 @@ function removeActiveTip() {
 function getTipPercentage() {
   if (!customTip.value) {
     const selectedTip = collectionTips.find(tip => tip.className.includes('active'));
+    if (!selectedTip) {
+      return
+    }
     const percentage = Number(selectedTip.getAttribute('data-value'))
   
     return percentage
@@ -127,7 +130,6 @@ function cleanCalculatedValues() {
 
   errorMessageFirstInput.textContent = ""
   errorMessageSecondInput.textContent = ""
-  errorMessageTipWrapper.textContent = ""
 
   inputBill.style.borderColor = 'transparent'
   inputNumberOfPeople.style.borderColor = 'transparent'
